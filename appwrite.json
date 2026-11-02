@@ -1,0 +1,36 @@
+{
+  "projectId": "6ae635720009f1af493a",
+  "functions": [
+    {
+      "$id": "myna-api",
+      "name": "myna-api",
+      "runtime": "node-22",
+      "execute": [
+        "users"
+      ],
+      "events": [
+        "users.*.create",
+        "tablesdb.myna.tables.products.rows.*.create",
+        "tablesdb.myna.tables.products.rows.*.update"
+      ],
+      "scopes": [
+        "databases.read",
+        "tables.read",
+        "rows.read",
+        "rows.write",
+        "columns.read",
+        "files.read",
+        "buckets.read",
+        "users.read",
+        "teams.read"
+      ],
+      "schedule": "",
+      "timeout": 120,
+      "enabled": true,
+      "logging": true,
+      "entrypoint": "src/main.js",
+      "commands": "npm install --omit=dev",
+      "path": "functions/myna-api"
+    }
+  ]
+}

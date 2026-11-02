@@ -1,0 +1,15 @@
+{
+  "name": "myna-api",
+  "version": "1.0.0",
+  "description": "myna backend: AES-256 keyring, YouCam skin analysis, server-priced orders",
+  "main": "src/main.js",
+  "scripts": {},
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "node-appwrite": "^31.0.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

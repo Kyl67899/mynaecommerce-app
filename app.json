@@ -1,0 +1,45 @@
+{
+  "expo": {
+    "name": "myna",
+    "slug": "myna-skin",
+    "scheme": "myna",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.myna.skin"
+    },
+    "android": {
+      "package": "com.myna.skin",
+      "adaptiveIcon": {
+        "backgroundColor": "#F6F1EA",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "output": "static"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      [
+        "expo-image-picker",
+        {
+          "cameraPermission": "myna uses your camera to take a selfie for your skin analysis.",
+          "photosPermission": "myna lets you pick a selfie from your photos for your skin analysis."
+        }
+      ],
+      "expo-image",
+      "expo-status-bar"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

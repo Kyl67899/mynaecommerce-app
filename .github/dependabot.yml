@@ -1,0 +1,16 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    ignore:
+      # Expo SDK 58's eslint-config-expo (eslint-plugin-import) supports ESLint up to 9.
+      # ESLint 10 breaks `npm ci` with ERESOLVE. Revisit with the next Expo SDK.
+      - dependency-name: eslint
+        update-types: ['version-update:semver-major']
+      # Expo pins these to the SDK; upgrade them with `npx expo install --fix` instead.
+      - dependency-name: 'expo*'
+      - dependency-name: react
+      - dependency-name: react-dom
+      - dependency-name: react-native
